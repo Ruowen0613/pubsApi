@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using pubsApi.Models;
-using PubsApi.DTOs;
 using PubsApi.Models;
+using PubsApi.DTOs;
 
 
-namespace pubsApi.Controllers
+namespace PubsApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -48,6 +47,7 @@ namespace pubsApi.Controllers
                         Royaltyper = ta.Royaltyper
                     }).ToList()
                 })
+                .OrderBy(b => b.Title_id)
                 .ToListAsync();
 
             return Ok(books);
@@ -92,7 +92,7 @@ namespace pubsApi.Controllers
 
         // POST: api/Titles
         [HttpPost]
-        public async Task<ActionResult<BookDTO>> PostBook(BookCreateDto bookCreateDto)
+        public async Task<ActionResult<BookCreateDto>> PostBook(BookCreateDto bookCreateDto)
         {
             var book = new Title
             {

@@ -10,7 +10,7 @@ namespace PubsApi.Models
         public string Au_id { get; set; }
         public string Au_lname { get; set; }
         public string Au_fname { get; set; }
-        public string Phone { get; set; }
+        public string Phone { get; set; } = "UNKNOWN"; // Default value
         public string? Address { get; set; }
         public string? City { get; set; }
         public string? State { get; set; }
@@ -20,5 +20,11 @@ namespace PubsApi.Models
         // Navigation property
        // [JsonIgnore]
         public ICollection<TitleAuthor> TitleAuthors { get; set; }
+
+        // Constructor to initialize collections
+        public Author()
+        {
+            TitleAuthors = new List<TitleAuthor>();
+        }
     }
 }

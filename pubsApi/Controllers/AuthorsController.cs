@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PubsApi.Models;
-using pubsApi.Models;
+using PubsApi.Models;
 
-namespace pubsApi.Controllers
+namespace PubsApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

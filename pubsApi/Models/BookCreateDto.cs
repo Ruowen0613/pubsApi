@@ -1,4 +1,4 @@
-﻿namespace pubsApi.Models
+﻿namespace PubsApi.Models
 {
     public class BookCreateDto
     {

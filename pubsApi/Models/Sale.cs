@@ -1,4 +1,4 @@
-﻿using pubsApi.Models;
+﻿using PubsApi.Models;
 
 public class Sale
 {

@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 
 
-namespace pubsApi.Models
+namespace PubsApi.Models
 {
     public class Title
     {
